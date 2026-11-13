@@ -1,0 +1,89 @@
+:root {
+    --fondo: #bdbdbd;
+    --tarjeta: white;
+    --texto: #111;
+    --boton: #df3044;
+}
+
+:root[data-tema="oscuro"] {
+    --fondo: #242424;
+    --tarjeta: #383838;
+    --texto: #f5f5f5;
+    --boton: #e5485d;
+}
+
+* {
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--fondo);
+}
+
+
+header {
+    padding: 16px;
+}
+
+.controles {
+    width: min(680px, calc(100% - 32px));
+    margin: 0 auto;
+}
+
+.controles label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.controles select {
+    width: 100%;
+    padding: 8px;
+    background-color: var(--tarjeta);
+}
+
+.menu {
+    width: min(680px, calc(100% - 32px));
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.card{
+    min-height: 290px;
+    padding: 9px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--tarjeta);
+    border-radius: 4px;
+    color: var(--texto);
+}
+
+img {
+    width: auto !important;
+    height: 150px;
+}
+
+.precio {
+    margin-bottom: 5px;
+}
+
+.card h2 {
+    margin: 0 0 5px;
+    font-size: 15px;
+}
+
+.card button {
+    margin-top: auto;
+    padding: 8px;
+    border: 0;
+    border-radius: 4px;
+    background-color: var(--boton);
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .menu {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
